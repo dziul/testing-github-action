@@ -6,15 +6,13 @@ on:
   pull_request:
     branches: [ master ]
 
-
+env: 
+      TARGET_PROJECT: host
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    env: 
-      TARGET_PROJECT: host
-
+    
     strategy:
       matrix:
         node-version: [ 16.x ]
