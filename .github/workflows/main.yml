@@ -31,19 +31,21 @@ jobs:
       # You may pin to the exact commit or the version.
       # uses: crazy-max/ghaction-github-pages@a117e4aa1fb4854d021546d2abdfac95be568a3a
       uses: crazy-max/ghaction-github-pages@v2.6.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         # Git domain (default github.com)
 #           domain: # optional, default is github.com
         # GitHub repository where assets will be deployed (default $GITHUB_REPOSITORY)
 #           repo: # optional
         # Git branch where assets will be deployed
-        target_branch: master # optional, default is gh-pages
+        target_branch: gh-pages # optional, default is gh-pages
         # Create incremental commit instead of doing push force
 #           keep_history: # optional, default is false
         # Allow an empty commit to be created
 #           allow_empty_commit: # optional, default is true
         # Build directory to deploy
-        build_dir: dist/
+        build_dir: dist
         # Whether to treat build_dir as an absolute path
 #           absolute_build_dir: aa # optional, default is false
         # If enabled, the content of symbolic links will be copied
