@@ -3,8 +3,8 @@ name: NodeJS with Webpack
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+#   pull_request:
+#     branches: [ master ]
 
 env: 
   TARGET_PROJECT: host
