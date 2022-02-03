@@ -7,12 +7,12 @@ on:
     branches: [ master ]
 
 env: 
-      TARGET_PROJECT: host
+  TARGET_PROJECT: host
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [ 16.x ]
