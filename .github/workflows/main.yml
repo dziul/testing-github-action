@@ -6,12 +6,14 @@ on:
   pull_request:
     branches: [ master ]
 
-env: 
-  TARGET_PROJECT: host
+
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    env: 
+      TARGET_PROJECT: host
 
     strategy:
       matrix:
@@ -48,7 +50,7 @@ jobs:
         # Allow an empty commit to be created
 #           allow_empty_commit: # optional, default is true
         # Build directory to deploy
-        build_dir: dist/apps/$TARGET_PROJECT
+        build_dir: dist/apps/${{ TARGET_PROJECT }}
         # Whether to treat build_dir as an absolute path
 #           absolute_build_dir: aa # optional, default is false
         # If enabled, the content of symbolic links will be copied
