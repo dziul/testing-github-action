@@ -1,0 +1,20 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <app-it-child-field [config]="{id: 'age', label: 'Idade', input:true}" [form]="form"></app-it-child-field>
+
+    <app-it-child-field [config]="{id: 'date', label: 'Data', input:true}" [form]="form"></app-it-child-field>
+    <app-it-child-field [config]="{id: 'sample', label: '<strong>apenas uma amostra com <code>input:false</code></strong>', input:false}" [form]="form"></app-it-child-field>
+
+
+    <div>
+        <label [attr.for]="'input-name'">Name</label>
+        <input id="input-name" formControlName='name'>
+    </div>
+
+    <button type="submit">Ok</button>
+</form>
+
+
+    <pre>
+    {{form.value | json }}
+    </pre>

@@ -1,0 +1,22 @@
+
+<ng-container *ngIf="form && config.input; else withoutReactiveForm">
+    <div [formGroup]="form">
+        <label [attr.for]="uuid">{{config.label}}</label>
+        <input [attr.id]="uuid" [formControlName]='config.id ?? null' type="number">
+    </div>
+</ng-container>
+
+
+<ng-template #withoutReactiveForm>
+    <ng-container *ngIf="config.input; else withoutInputEnabled">
+        <div>
+            <label [attr.for]="uuid" [innerHTML]="config.label"></label>
+            <input [attr.id]="uuid" [attr.name]="config.id" type="number">
+        </div>
+    </ng-container>
+</ng-template>
+
+<ng-template #withoutInputEnabled>
+    <p [innerHTML]="config.label">
+    </p>
+</ng-template>
