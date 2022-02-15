@@ -11,6 +11,12 @@ const routes: Routes = [
       (await import('./features/testing-form/testing-form.module'))
         .TestingFormModule,
   },
+  {
+    path: 'call-me-out',
+    loadChildren: async () =>
+      (await import('./features/call-me-out/call-me-out.module'))
+        .CallMeOutModule,
+  },
 ];
 
 @NgModule({

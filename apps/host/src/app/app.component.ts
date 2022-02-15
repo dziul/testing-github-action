@@ -15,9 +15,7 @@ export class AppComponent implements OnInit {
     private viewContainerRef: ViewContainerRef
   ) {}
 
-  ngOnInit(): void {
-    this.onClick();
-  }
+  ngOnInit(): void {}
 
   onClick() {
     this.loaderService.open(this.viewContainerRef);

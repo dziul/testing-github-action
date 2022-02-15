@@ -1,0 +1,16 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <textarea formControlName="textarea" [rows]="10">
+    
+  </textarea>
+  <button type="submit">OK</button>
+</form>
+
+
+
+<strong>{{target}}</strong>
+<ul>
+  <li *ngFor="let item of list; let i = index">
+    <input type="checkbox" [attr.id]="'i-'+i"> <label [attr.for]="'i-'+i">{{item}}</label>
+  </li>
+</ul>
